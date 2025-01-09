@@ -45,7 +45,7 @@ def deblur(model, input_img):
 def main():
     model = load_model()
     #Provide path to blurred image
-    input_img_path = "d:/VSCode/Lab/IPT/blurred.png"
+    input_img_path = "d:/blurred.png"
     tensor_input, original_img = preprocess(input_img_path)
     print("Deblurring image...")
     tensor_output = deblur(model, tensor_input)
@@ -66,7 +66,7 @@ def main():
     plt.axis("off")
     plt.show()
 
-    output_img.save("deblurred_output.png")
+    output_img.save("d:/deblurred_output.png")
     print("Deblurred image saved as 'deblurred_output.png'")
 
 if __name__ == "__main__":
